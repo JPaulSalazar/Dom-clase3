@@ -62,3 +62,22 @@ console.log(td[4]);
   Investiga un metodo de algun elemento y trae un ejemplo de
   para que lo usarias
 */
+
+//insertBefore nos permite elegir un nodo del documento e incluir otro antes que él.
+
+//html del ejemplo
+<div>
+  <p id="childElement">Un párrafo.</p>
+</div>
+
+// Crea un nuevo, elemento <span>
+let sp = document.createElement("span");
+
+// Obtener una referencia al elemento, de donde queremos insertar el elemento antes 
+let p = document.getElementById("childElement");
+
+// Obtener una referencia al nodo padre
+let parentDiv = p.parentNode;
+
+// Inserta un nuevo elemento en el DOM antes de p
+parentDiv.insertBefore(sp, p);
